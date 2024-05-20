@@ -1,122 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="index.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>skibidi Coin</title>
-<style>
-
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  .navbar {
-    overflow: hidden;
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 20px; 
-    transition: all 0.3s ease-in-out; 
-    z-index: 1;
-    
-  }
-  
-  .navbar.scroll-down {
-    padding: 5px 10px; 
-  }
-  
-  .navbar a {
-    float: right;
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 8px 10px; 
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
-  .navbar a:hover {
-    color: rgb(255, 251, 18);
-  }
-
-  .content {
-    padding-top: 20px;
-  }
-
-  .section {
-    padding: 20px;
-    color: black;
-  }
-
-  .section1 {
-    position: relative;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-
-  .section1 video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; 
-  }
-
-  .section2 {
-    background-color: rgb(255, 255, 255);
-    height: 1500px; /* Adjust height as needed */
-  }
-
-  .section3 {
-    background-color: rgb(255, 255, 255);
-    height: 500px;
-  }
-
-  .section4 {
-    background-color: rgb(255, 255, 255);
-    height: 500px;
-  }
-
-  .active {
-    font-weight: bold;
-  }
-
-  .logo {
-    margin-top: 50px;
-    text-align: center;
-  }
-
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    cursor: pointer; 
-  }
-
-
-
-</style>
+<title>SkibidiCoin </title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/stylesheets/styles.css">
 </head>
 <body>
 
 <div class="navbar" id="navbar">
-  <a href="#section1">So Home</a>
+  <a href="#section1">Home</a>
   <a href="#section2">What is Skibidi Coin</a>
-  <a href="#section3">Become an Investor</a>
+  <a href="#section3">Buy Skib</a>
   <a href="#section4">Community</a>
 </div>
 
@@ -126,61 +21,44 @@
       <source src="assets/other/marketmove-mm.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div> 
-    <h1>Skibidi</h1>
-    <p>TM</p>
+    <h1>SkibidiCoin</h1>
     <div class="logo">
       <img src="assets/images/skibidicoin.png" alt="Logo" width="100" height="100">
     </div>
   </div>
   <div class="section section2" id="section2">
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 style="font-family: Verdan, Geneva, Tahoma, sans-serif">
-      Our Community 
-</h1>
-    <h4>Our community spamns from our well moderated discord server too our twitter account </h4>
-    <div style="text-align: right;">
-      <iframe src="https://discord.com/widget?id=1233366551697162292&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
-    <div style = "text-align: right;">
-      Hello
-    </div>
-    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliquwe.</p>
+    <h3>What is SkibidiCoin?</h3>
+    <p>SkibidiCoin is a memecoin on the binance smart chain network derived from the Internet meme: "skibidi toilet". The token was launched on the 26th of April 2024 with an initial supply of 100,000,000 tokens.</p>
   </div>
   <div class="section section3" id="section3">
-    <h3>Section 3</h3>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h3>Buy SKIB</h3>
+    <p>At the moment SKIB is available on pancakeswap</p>
   </div>
   <div class="section section4" id="section4">
     <h3>Section 4</h3>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Join our community and show your interest in this project.</p>
+    <iframe src="https://discord.com/widget?id=1233366551697162292&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   </div>
-  
 </div>
 
-<div class="footer">
-  <p>&copy; Trademarks & brands are the own by there respective owners.</p>
+<div class="footer" id="trademark">
+  <p>&copy; [Click to hide] 2024 Skibidi. All rights reserved. Contact us: siipy@skibidicoin.xyz</p>
 </div>
 
 <script>
-  window.addEventListener('DOMContentLoaded', function() {
-    let prevScrollPos = window.pageYOffset;
+  let prevScrollPos = window.pageYOffset;
 
-    // Debounce the scroll event to limit how often it's fired
-    window.addEventListener('scroll', _.debounce(function() {
-      let currentScrollPos = window.pageYOffset;
-      const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    let currentScrollPos = window.pageYOffset;
+    const navbar = document.getElementById('navbar');
 
-      if (prevScrollPos < currentScrollPos && currentScrollPos > 100) {
-        navbar.classList.add('scroll-down');
-      } else {
-        navbar.classList.remove('scroll-down');
-      }
+    if (prevScrollPos < currentScrollPos) {
+      navbar.classList.add('scroll-down');
+    } else {
+      navbar.classList.remove('scroll-down');
+    }
 
-      prevScrollPos = currentScrollPos;
-    }, 100)); // Adjust debounce delay as needed
+    prevScrollPos = currentScrollPos;
   });
 
   document.getElementById("trademark").addEventListener("click", function() {
